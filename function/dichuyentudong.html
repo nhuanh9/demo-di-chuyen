@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="bong" src="ball.png" style="position: absolute; width: 100px; left: 100px; top: 300px;">
+
+    <script>
+        let anh = document.getElementById('bong');
+        let speedX = 5; 
+        let speedY = 0;
+        function move() {
+            anh.style.left = parseInt(anh.style.left) + speedX + 'px';
+            anh.style.top = parseInt(anh.style.top) + speedY + 'px';
+            requestAnimationFrame(move);
+        }
+        move();
+        
+        window.addEventListener("keydown", (evt) => {
+            console.log(evt);
+            if(evt.key == "ArrowDown") {
+                speedY = 5;
+                speedX = 0;
+            }
+            if(evt.key == "ArrowUp") {
+                speedY = -5;
+                speedX = 0;
+            }
+            if(evt.key == "ArrowLeft") {
+                speedY = 0;
+                speedX = -5;
+            }
+            if(evt.key == "ArrowRight") {
+                speedY = 0;
+                speedX = 5;
+            }
+        })
+    </script>
+</body>
+
+</html>

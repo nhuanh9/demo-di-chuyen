@@ -10,24 +10,38 @@
         button {
             z-index: 1;
         }
+
+        .game {
+            width: 600px;
+            height: 600px;
+            border: 2px solid;
+            background: pink;
+        }
     </style>
 </head>
 
 <body id="bd">
-    <img id="anh" src="https://atlas-content-cdn.pixelsquid.com/stock-images/multicolor-soccer-ball-oJVn048-600.jpg"
-        alt="" style="width: 200px; position: relative; left: 100px; top: 300px;">
+    <div class="game">
+
+    </div>
+    <img id="anh" src="ball.png"
+        alt="" style="width: 200px; position: absolute; left: 100px; top: 300px;">
     <script>
         let phu = document.getElementById('anh');
         window.addEventListener('keydown', (evt) => {
             console.log(evt);
             if (evt.key == "ArrowRight") {
-                phu.style.left = parseInt(phu.style.left) + 10 + 'px';
+                if (parseInt(phu.style.left) < 600 - 190) {
+                    phu.style.left = parseInt(phu.style.left) + 10 + 'px';
+                }
             }
             if (evt.key == "ArrowLeft") {
                 phu.style.left = parseInt(phu.style.left) - 10 + 'px';
             }
             if (evt.key == "ArrowUp") {
-                phu.style.top = parseInt(phu.style.top) - 10 + 'px';
+                if (parseInt(phu.style.top) > 10) {
+                    phu.style.top = parseInt(phu.style.top) - 10 + 'px';
+                }
             }
             if (evt.key == "ArrowDown") {
                 phu.style.top = parseInt(phu.style.top) + 10 + 'px';

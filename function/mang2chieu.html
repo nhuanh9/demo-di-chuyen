@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr2 = [
+            [12, 23, 32, 66], //0,3 
+            [31, 34, 25, 38], //1,2 
+            [11, 21, 31, 12], //2,1 
+            [10, 31, 41, 11], //3,0
+        ];
+        let sum = 0;
+        for (let i = 0; i < arr2.length; i++) {
+            sum += arr2[i][3-i];
+        }
+
+        document.write("tổng là: " + sum);
+    </script>
+</body>
+
+</html>

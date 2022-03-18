@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Hàm: tập hợp nhiều câu lệnh để giải quyết một chức năng -->
+    <!-- Hàm có thể gọi và sử dụng nhiều lần nhưng không liên tiếp như vòng lặp -->
+    <!-- Hàm thì có thể có đầu vào và đầu ra -->
+    <script>
+        //  Viết 1 hàm có tên là find, có đầu voà là 1 arr (mảng) và 1 số,
+        // tìm vị trí của số đố trong mảng, nếu có thì trả về vị trí, ko có thì trả về -1
+        //  Gọi 2 hàm
+
+        function find(arr, x) {
+            let rs;
+            rs = -1;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == x) {
+                    rs = i;
+                }
+            }
+            return rs;
+        }
+        let m = find([1, 2, "a", 4], "b");
+        alert(m);
+    </script>
+
+</body>
+
+</html>
